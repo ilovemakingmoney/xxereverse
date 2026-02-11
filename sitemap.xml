@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlset [
+  <!ENTITY xxe SYSTEM "file:///etc/hostname">
+]>
 <urlset>
   <url>
-    <loc>https://example.com/</loc>
+    <loc>&xxe;</loc>
   </url>
 </urlset>
